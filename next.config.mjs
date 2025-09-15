@@ -1,12 +1,10 @@
-// next.config.ts
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   eslint: {
     // ⬇️ Jangan blokir build gara-gara lint error
     ignoreDuringBuilds: true,
   },
-  // (opsional) kalau suatu saat ada error TS, bisa dihidupkan sementara:
+  // Kalau nanti mau memaksa lolos meski error TS (opsional):
   // typescript: { ignoreBuildErrors: true },
 };
 
