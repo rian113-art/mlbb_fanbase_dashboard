@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* ====== THEME VARIABLES (ubah di sini saja) ====== */
+:root {
+  /* NAVBAR */
+  --nav-bg: #ffffff;           /* contoh: slate-900 */
+  --nav-fg: #555555;
+  --nav-border: rgba(110, 110, 110, 0.12);
+  --nav-hover: rgba(36, 36, 36, 0.034);
+  --nav-active: rgba(29, 29, 29, 0.16);
+
+  /* FOOTER */
+  --footer-bg: #00085f;        /* background */
+  --footer-border: rgba(0,0,0,0.1);
+  --footer-text: #fdfdfd;      /* teks utama */
+  --footer-text-muted: rgba(255, 255, 255, 0.7);
+  --footer-text-faint: rgba(255, 255, 255, 0.5);
+  --footer-line: rgba(155, 155, 155, 0.493);
+
+  /* JUDUL DASHBOARD */
+  --title-fanbase: #009bd8;
+  --title-mlbb: #000000;
+  --title-dashboard: #000000;
+}
+
+/* (Opsional) Preset cepat — tinggal copas nilai ke :root di atas
+:root.theme-light {
+  --nav-bg: #ffffff; --nav-fg: #0f172a; --nav-border: rgba(0,0,0,0.1);
+  --nav-hover: rgba(15,23,42,0.04); --nav-active: rgba(15,23,42,0.08);
+  --footer-bg: #ffffff; --footer-fg: #0f172a; --footer-border: rgba(0,0,0,0.1);
+}
+:root.theme-gold {
+  --nav-bg: #f59e0b; --nav-fg: #0b1020; --nav-border: rgba(0,0,0,0.12);
+  --nav-hover: rgba(0,0,0,0.06); --nav-active: rgba(0,0,0,0.12);
+  --footer-bg: #f59e0b; --footer-fg: #0b1020; --footer-border: rgba(0,0,0,0.12);
+}
+*/
+
+
+/* === Rainbow border untuk kartu M-Series (stabil, mobile-safe) === */
+@keyframes ms-flow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Wrapper = border pelangi */
+.ms-rare {
+  background: linear-gradient(
+    90deg,
+    #ff0080, #ff8c00, #ffd400, #2bd576, #00e5ff, #1e40ff, #a855f7, #ff0080
+  );
+  background-size: 300% 300%;
+  animation: ms-flow 6s linear infinite;
+  border-radius: 1rem;            /* samakan dengan rounded-2xl */
+}
+
+/* Konten di dalam wrapper (kartu putih biasa) */
+.ms-inner {
+  background: #fff;
+  border-radius: calc(1rem - 4px); /* 4px = ketebalan border (lihat p-[4px]) */
+}
+
+/* Badge “M-Series” — gradient text, aman dari terpotong */
+.ms-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  background: #ffffff;                      /* supaya kontras & tidak “ngilang” */
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 9999px;
+  box-shadow: 0 1px 1.5px rgba(0,0,0,.06);
+  /* teks pelangi */
+  background-image: linear-gradient(90deg,#ff0080,#ff8c00,#ffd400,#2bd576,#00e5ff,#1e40ff,#a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* Container untuk badge biar bisa diatur posisi/ukuran */
+.ms-badge-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 12px;         /* atur ukuran badge */
+  border-radius: 9999px;    /* full rounded */
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0);  /* tipis biar kontras */
+}
+
+/* Teks rainbow */
+.ms-badge {
+  background: linear-gradient(90deg, #ff0080, #ff8c00, #d1af02, #2bd576, #00e5ff, #1e40ff, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 10px;      /* kecil rapi */
+  font-weight: 700;
+  line-height: 1;       /* biar pas di tengah */
+  white-space: nowrap;  /* <-- ini penting, biar gak kebungkus */
+}
