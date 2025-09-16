@@ -78,7 +78,7 @@ export const MATCHES: MatchItem[] = [
   // ======================
   // WEEK 5 — 19–21 September 2025
   // Jumat, 19 Sep
-  { id: "w5-d1-m1", dateISO: "2025-09-19T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK", away: "NAVI", status: "upcoming" },
+  { id: "w5-d1-m1", dateISO: "2025-09-19T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK", away: "NAVI", status: "finished", score: { home: 2, away: 0 } },
   { id: "w5-d1-m2", dateISO: "2025-09-19T18:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "EVOS",  away: "ONIC",  status: "upcoming" },
   // Sabtu, 20 Sep
   { id: "w5-d2-m1", dateISO: "2025-09-20T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "DEWA", away: "RRQ", status: "upcoming" },
