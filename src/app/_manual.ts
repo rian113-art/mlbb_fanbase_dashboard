@@ -15,7 +15,7 @@ export const MANUAL_STATS: Record<Team, {
   videos?: number;
   hiddenSubscribers?: boolean; // jika true, client akan skip update ke 0
 }> = {
-  ONIC: { title: "ONIC Esports", subscribers: 914_000, views: 170_323_475, videos: 800 },
+  ONIC: { title: "ONIC Esports", subscribers: 114_000, views: 170_323_475, videos: 800 },
   RRQ:  { title: "RRQ Hoshi",     subscribers: 4_190_000, views: 920_988_477, videos: 1200 },
   EVOS: { title: "EVOS Glory",    subscribers: 3_070_000, views: 391_629_090, videos: 1000 },
   TLID: { title: "Team Liquid ID",subscribers: 2_020_000, views: 241_716_348, videos: 450 },
