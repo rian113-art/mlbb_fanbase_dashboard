@@ -78,28 +78,28 @@ export const MATCHES: MatchItem[] = [
   // ======================
   // WEEK 5 — 19–21 September 2025
   // Jumat, 19 Sep
-  { id: "w5-d1-m1", dateISO: "2025-09-19T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK", away: "NAVI", status: "upcoming" },
-  { id: "w5-d1-m2", dateISO: "2025-09-19T18:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "EVOS",  away: "ONIC",  status: "upcoming" },
+  { id: "w5-d1-m1", dateISO: "2025-09-19T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK", away: "NAVI", status: "finished", score: { home: 0, away: 2 } },
+  { id: "w5-d1-m2", dateISO: "2025-09-19T18:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "EVOS",  away: "ONIC",  status: "finished", score: { home: 1, away: 2 } },
   // Sabtu, 20 Sep
-  { id: "w5-d2-m1", dateISO: "2025-09-20T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "DEWA", away: "RRQ", status: "upcoming" },
-  { id: "w5-d2-m2", dateISO: "2025-09-20T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "AE",  away: "TLID",  status: "upcoming" },
-  { id: "w5-d2-m3", dateISO: "2025-09-20T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "EVOS",  away: "BTR",  status: "upcoming" },
+  { id: "w5-d2-m1", dateISO: "2025-09-20T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "DEWA", away: "RRQ", status: "finished", score: { home: 2, away: 0 } },
+  { id: "w5-d2-m2", dateISO: "2025-09-20T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "AE",  away: "TLID",  status: "finished", score: { home: 2, away: 1 } },
+  { id: "w5-d2-m3", dateISO: "2025-09-20T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "EVOS",  away: "BTR",  status: "finished", score: { home: 0, away: 2 }  },
     // Mingu, 20 Sep
-  { id: "w5-d3-m1", dateISO: "2025-09-21T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "AE", away: "NAVI", status: "upcoming" },
-  { id: "w5-d3-m2", dateISO: "2025-09-21T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK",  away: "ONIC",  status: "upcoming" },
-  { id: "w5-d3-m3", dateISO: "2025-09-21T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "DEWA",  away: "TLID",  status: "upcoming" },
+  { id: "w5-d3-m1", dateISO: "2025-09-21T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "AE", away: "NAVI", status: "finished", score: { home: 2, away: 1 }  },
+  { id: "w5-d3-m2", dateISO: "2025-09-21T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK",  away: "ONIC",  status: "finished", score: { home: 0, away: 2 }  },
+  { id: "w5-d3-m3", dateISO: "2025-09-21T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "DEWA",  away: "TLID",  status: "finished", score: { home: 2, away: 0 }  },
 
     // ======================
   // WEEK 6 — 26–28 September 2025
   // Jumat, 26 Sep
-  { id: "w6-d1-m1", dateISO: "2025-09-26T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "NAVI", away: "DEWA", status: "upcoming" },
-  { id: "w6-d1-m2", dateISO: "2025-09-26T18:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "AE",  away: "GEEK",  status: "upcoming" },
+  { id: "w6-d1-m1", dateISO: "2025-09-26T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "NAVI", away: "DEWA", status: "finished", score: { home: 0, away: 2 }  },
+  { id: "w6-d1-m2", dateISO: "2025-09-26T18:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "AE",  away: "GEEK",  status: "finished", score: { home: 2, away: 0 }  },
   // Sabtu, 27 Sep
-  { id: "w6-d2-m1", dateISO: "2025-09-27T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "EVOS", away: "AE", status: "upcoming" },
-  { id: "w6-d2-m2", dateISO: "2025-09-27T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "TLID",  away: "ONIC",  status: "upcoming" },
-  { id: "w6-d2-m3", dateISO: "2025-09-27T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "RRQ",  away: "BTR",  status: "upcoming" },
+  { id: "w6-d2-m1", dateISO: "2025-09-27T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "EVOS", away: "AE", status: "finished", score: { home: 1, away: 2 }  },
+  { id: "w6-d2-m2", dateISO: "2025-09-27T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "TLID",  away: "ONIC",  status: "finished", score: { home: 0, away: 2 }  },
+  { id: "w6-d2-m3", dateISO: "2025-09-27T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "RRQ",  away: "BTR",  status: "finished", score: { home: 1, away: 2 }  },
     // Mingu, 28 Sep
-  { id: "w6-d3-m1", dateISO: "2025-09-28T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "NAVI", away: "TLID", status: "upcoming" },
+  { id: "w6-d3-m1", dateISO: "2025-09-28T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "NAVI", away: "TLID", status: "finished", score: { home: 1, away: 2 }  },
   { id: "w6-d3-m2", dateISO: "2025-09-28T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "ONIC",  away: "RRQ",  status: "upcoming" },
   { id: "w6-d3-m3", dateISO: "2025-09-28T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK",  away: "EVOS",  status: "upcoming" },
 
