@@ -101,7 +101,7 @@ export const MATCHES: MatchItem[] = [
     // Mingu, 28 Sep
   { id: "w6-d3-m1", dateISO: "2025-09-28T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "NAVI", away: "TLID", status: "finished", score: { home: 2, away: 1 }  },
   { id: "w6-d3-m2", dateISO: "2025-09-28T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "ONIC",  away: "RRQ",  status: "finished", score: { home: 2, away: 0 } },
-  { id: "w6-d3-m3", dateISO: "2025-09-28T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK",  away: "EVOS",  status: "upcoming" },
+  { id: "w6-d3-m3", dateISO: "2025-09-28T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK",  away: "EVOS",  status: "finished", score: { home: 0, away: 2 } },
 
       // ======================
   // WEEK 7 — 03–05 Oktober 2025
