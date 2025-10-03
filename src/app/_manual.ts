@@ -15,15 +15,15 @@ export const MANUAL_STATS: Record<Team, {
   videos?: number;
   hiddenSubscribers?: boolean; // jika true, client akan skip update ke 0
 }> = {
-  ONIC: { title: "ONIC Esports", subscribers: 914_000, views: 170_323_475, videos: 800 },
-  RRQ:  { title: "RRQ Hoshi",     subscribers: 4_190_000, views: 920_988_477, videos: 1200 },
+  ONIC: { title: "ONIC Esports", subscribers: 937_000, views: 170_323_475, videos: 800 },
+  RRQ:  { title: "RRQ Hoshi",     subscribers: 4_200_000, views: 920_988_477, videos: 1200 },
   EVOS: { title: "EVOS Glory",    subscribers: 3_070_000, views: 391_629_090, videos: 1000 },
   TLID: { title: "Team Liquid ID",subscribers: 2_020_000, views: 241_716_348, videos: 450 },
-  GEEK: { title: "Geek Fam ID",   subscribers: 75_400, views: 10_784_342, videos: 430 },
-  AE:   { title: "Alter Ego",     subscribers: 695_000, views: 107_052_309, videos: 400 },
-  NAVI: { title: "NAVI",          subscribers: 36_300, views: 8_284_320, videos: 380 },
-  BTR:  { title: "Bigetron",      subscribers: 1_464_000,  views: 271_281_122, videos: 360 },
-  DEWA: { title: "Dewa United",   subscribers: 410_000,  views: 3_959_591, videos: 330 },
+  GEEK: { title: "Geek Fam ID",   subscribers: 75_500, views: 10_784_342, videos: 430 },
+  AE:   { title: "Alter Ego",     subscribers: 696_000, views: 107_052_309, videos: 400 },
+  NAVI: { title: "NAVI",          subscribers: 36_600, views: 8_284_320, videos: 380 },
+  BTR:  { title: "Bigetron",      subscribers: 1_691_000,  views: 271_281_122, videos: 360 },
+  DEWA: { title: "Dewa United",   subscribers: 40_500,  views: 3_959_591, videos: 330 },
 };
 
 // Status live manual (untuk grafik Livestream)
