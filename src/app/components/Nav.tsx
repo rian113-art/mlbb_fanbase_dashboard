@@ -8,7 +8,6 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const links = [
   { href: "/", label: "Dashboard" },
-  { href: "/leaderboard", label: "Leaderboard Fans" },
   { href: "/schedule", label: "Jadwal Match" },
   { href: "/standings", label: "Pringkat Match" },
   { href: "/teams", label: "Teams MPL ID S16" },
