@@ -6,6 +6,8 @@ import Image from "next/image";
 import { MATCHES, type MatchItem } from "../_matches";
 import { TEAM_FULLNAME, type Team } from "../_data";
 import PerformanceChart from "./PerformanceChart";
+{/* ==== Kartu baru: Playoffs ==== */}
+import PlayoffCard from "./PlayoffCard";
 
 /* ========= Helpers: Week ranges (WIB) ========= */
 const WEEK_RANGES: { week: number; start: string; end: string }[] = [
@@ -216,6 +218,9 @@ export default function StandingsPage() {
     DEWA: "#22c55e",
   }}
 />
+{/* ==== Kartu baru: Playoffs ==== */}
+<PlayoffCard />
+
     </main>
   );
 }
