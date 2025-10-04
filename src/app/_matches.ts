@@ -109,9 +109,9 @@ export const MATCHES: MatchItem[] = [
   { id: "w7-d1-m1", dateISO: "2025-10-03T15:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK", away: "DEWA", status: "finished", score: { home: 2, away: 0 }  },
   { id: "w7-d1-m2", dateISO: "2025-10-03T18:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "BTR",  away: "TLID",  status: "finished", score: { home: 0, away: 2 }  },
   // Sabtu, 04 Okt
-  { id: "w7-d2-m1", dateISO: "2025-10-04T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "DEWA", away: "AE", status: "upcoming" },
-  { id: "w7-d2-m2", dateISO: "2025-10-04T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "EVOS",  away: "RRQ",  status: "upcoming" },
-  { id: "w7-d2-m3", dateISO: "2025-10-04T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "ONIC",  away: "NAVI",  status: "upcoming" },
+  { id: "w7-d2-m1", dateISO: "2025-10-04T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "DEWA", away: "AE", status: "finished", score: { home: 2, away: 0 }  },
+  { id: "w7-d2-m2", dateISO: "2025-10-04T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "EVOS",  away: "RRQ",  status: "finished", score: { home: 2, away: 1 }  },
+  { id: "w7-d2-m3", dateISO: "2025-10-04T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "ONIC",  away: "NAVI",  status: "finished", score: { home: 2, away: 0 }  },
     // Mingu, 05 Okt
   { id: "w7-d3-m1", dateISO: "2025-10-05T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "RRQ", away: "GEEK", status: "upcoming" },
   { id: "w7-d3-m2", dateISO: "2025-10-05T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "NAVI",  away: "BTR",  status: "upcoming" },
