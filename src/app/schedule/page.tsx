@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { MATCHES, type MatchItem } from "../_matches";
 import { TEAM_FULLNAME, type Team } from "../_data";
+import PlayoffBracket from "../components/PlayoffBracket";
+
 
 /* =========================
    Konstanta & formatter
@@ -223,7 +225,7 @@ export default function SchedulePage() {
           </p>
         </div>
 
-        {/* FILTER BAR — mobile: stacked full-width, desktop: inline */}
+        {/* FILTER BAR */}
         <div className="w-full md:w-auto">
           <div className="rounded-2xl border border-slate-200 bg-white p-3 md:p-2 shadow-sm">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:items-center md:gap-2 gap-3">
@@ -322,6 +324,16 @@ export default function SchedulePage() {
             ))}
           </div>
         )}
+      </section>
+
+      {/* === PLAYOFFS BRACKET === */}
+      <section className="mt-10">
+        <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+          <h2 className="text-lg font-semibold mb-3 flex items-center gap-2">
+            🏆 Playoffs Bracket
+          </h2>
+          <PlayoffBracket />
+        </div>
       </section>
 
       {/* Catatan */}
