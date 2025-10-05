@@ -18,15 +18,16 @@ export interface PlayoffMatch {
 
 export const PLAYOFF_MATCHES: PlayoffMatch[] = [
   // Quarterfinals
-  { id: "1", stage: "Playoff", round: "Quarterfinals", home: "ONIC", away: "RRQ", score: { home: 3, away: 1 }, status: "finished", datetime: "Jum, 03 Okt, 16:15", format: "BO6" },
-  { id: "2", stage: "Playoff", round: "Quarterfinals", home: "EVOS", away: "TLID", score: { home: 2, away: 3 }, status: "finished", datetime: "Jum, 03 Okt, 19:00", format: "BO6" },
-  { id: "3", stage: "Playoff", round: "Quarterfinals", home: "EVOS", away: "TLID", score: { home: 2, away: 3 }, status: "finished", datetime: "Jum, 03 Okt, 19:00", format: "BO6" },
+  { id: "1", stage: "Playoff", round: "Quarterfinals", home: "ONIC", away: "BTR", score: { home: 0, away: 0 }, status: "finished", datetime: "Jum, 03 Okt, 16:15", format: "BO6" },
+  { id: "2", stage: "Playoff", round: "Quarterfinals", home: "AE", away: "DEWA", score: { home: 0, away: 0 }, status: "finished", datetime: "Jum, 03 Okt, 19:00", format: "BO6" },
+  { id: "3", stage: "Playoff", round: "Quarterfinals", home: "EVOS", away: "NAVI", score: { home: 0, away: 0 }, status: "finished", datetime: "Jum, 03 Okt, 19:00", format: "BO6" },
+  
   
 
   // Semifinals
-  { id: "3", stage: "Playoff", round: "Semifinals", home: "ONIC", away: "TLID", score: { home: 3, away: 2 }, status: "finished", datetime: "Sab, 04 Okt, 16:00", format: "BO6" },
+ 
 
   // Final
-  { id: "4", stage: "Playoff", round: "Final", home: "ONIC", away: "RRQ", score: { home: 4, away: 3 }, status: "finished", datetime: "Min, 05 Okt, 18:00", format: "BO6" },
+  
 ];
 
