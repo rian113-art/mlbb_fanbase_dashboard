@@ -4,91 +4,65 @@ import Image from "next/image";
 import { PLAYOFF_MATCHES, type PlayoffMatch } from "../schedule/_playoffMatches";
 
 export default function PlayoffBracket() {
-  // Ambil semua round unik dari data
-  const rounds = Array.from(new Set(PLAYOFF_MATCHES.map((m) => m.round)));
+  const upperMatches = PLAYOFF_MATCHES.filter((m) => m.bracket === "Upper");
+  const lowerMatches = PLAYOFF_MATCHES.filter((m) => m.bracket === "Lower");
+  const finals = PLAYOFF_MATCHES.filter((m) => m.stage === "Grand Final");
+
+  const renderMatch = (match: PlayoffMatch) => {
+    const homeScore = match.score?.home ?? "-";
+    const awayScore = match.score?.away ?? "-";
+
+    return (
+      <div key={match.id} className="relative flex flex-col gap-1 p-2 border rounded-lg bg-slate-50 shadow-sm w-36">
+        <div className="flex justify-between">
+          <span className="font-semibold truncate">{match.home}</span>
+          <span>{homeScore}</span>
+        </div>
+        <div className="flex justify-between">
+          <span className="font-semibold truncate">{match.away}</span>
+          <span>{awayScore}</span>
+        </div>
+        {match.datetime && <div className="text-[10px] text-slate-400">{match.datetime}</div>}
+        {match.format && <div className="text-[10px] text-slate-400">{match.format}</div>}
+      </div>
+    );
+  };
+
+  const renderBracketColumn = (matches: PlayoffMatch[], label: string) => (
+    <div className="flex flex-col items-center gap-6">
+      <h3 className="text-sm font-semibold mb-2">{label}</h3>
+      {matches.map(renderMatch)}
+    </div>
+  );
 
   return (
-    <section className="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm mt-6">
-      <h2 className="text-lg font-semibold mb-4">Playoffs Bracket MPL ID Season 16 (data ini masih simulasiatai tidak benar)</h2>
+    <section className="p-5 bg-white shadow-sm rounded-2xl overflow-x-auto">
+      <h2 className="text-lg font-semibold mb-4">Playoffs Bracket</h2>
 
-      <div className="overflow-x-auto">
-        <div className="flex gap-8 min-w-[900px]">
-          {rounds.map((round) => {
-            const matches = PLAYOFF_MATCHES.filter((m) => m.round === round);
+      <div className="flex items-start gap-12">
+        {/* Upper Bracket */}
+        {renderBracketColumn(
+          upperMatches.filter((m) => m.round === "Quarterfinals"),
+          "UB Quarterfinals"
+        )}
+        {renderBracketColumn(
+          upperMatches.filter((m) => m.round === "Semifinals"),
+          "UB Semifinals"
+        )}
 
-            return (
-              <div key={round} className="flex flex-col gap-6 min-w-[220px]">
-                <h3 className="text-sm font-semibold text-slate-600 mb-2">{round}</h3>
-                {matches.map((m) => (
-                  <MatchCard key={m.id} match={m} />
-                ))}
-              </div>
-            );
-          })}
-        </div>
+        {/* Lower Bracket */}
+        {renderBracketColumn(
+          lowerMatches.filter((m) => m.round.includes("Round")),
+          "LB Round 1"
+        )}
+        {renderBracketColumn(
+          lowerMatches.filter((m) => m.round.includes("Semifinals")),
+          "LB Semifinals"
+        )}
+
+        {/* Grand Final */}
+        {renderBracketColumn(finals, "Grand Final")}
       </div>
-
-      <p className="text-[11px] text-slate-500 mt-4">
-        Geser ke kanan untuk melihat seluruh bracket (atau miringkan layar di HP).
-      </p>
     </section>
-  );
-}
-
-function MatchCard({ match }: { match: PlayoffMatch & { datetime?: string; format?: string } }) {
-  const winner =
-    match.score.home > match.score.away
-      ? match.home
-      : match.score.away > match.score.home
-      ? match.away
-      : "";
-
-  return (
-    <div className="relative border border-slate-200 rounded-xl bg-slate-50 p-3 shadow-sm w-[220px]">
-      {/* Garis koneksi ke round berikutnya */}
-      <div className="absolute top-1/2 right-[-40px] w-8 h-[2px] bg-slate-300"></div>
-
-      {/* Tampilkan info jadwal */}
-      {match.datetime && match.format && (
-        <div className="text-[11px] text-slate-500 mb-1 text-center">
-          {match.datetime} · {match.format}
-        </div>
-      )}
-
-      <TeamRow team={match.home} isWinner={winner === match.home} score={match.score.home} />
-      <TeamRow team={match.away} isWinner={winner === match.away} score={match.score.away} />
-    </div>
-  );
-}
-
-function TeamRow({
-  team,
-  isWinner,
-  score,
-}: {
-  team: string;
-  isWinner: boolean;
-  score: number;
-}) {
-  const teamLogo = `/logos/${team}.png`;
-
-  return (
-    <div
-      className={`flex items-center justify-between gap-2 p-1 px-2 rounded-md mb-1 ${
-        isWinner ? "bg-yellow-100 border border-yellow-400" : "bg-white border border-slate-200"
-      }`}
-    >
-      <div className="flex items-center gap-2">
-        <Image
-          src={teamLogo}
-          alt={team}
-          width={24}
-          height={24}
-          className="rounded-sm object-contain"
-        />
-        <span className="font-semibold">{team}</span>
-      </div>
-      <span className="font-bold">{score}</span>
-    </div>
   );
 }

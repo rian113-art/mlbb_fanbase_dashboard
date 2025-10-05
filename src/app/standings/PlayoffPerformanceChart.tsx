@@ -11,12 +11,13 @@ import {
   Tooltip,
 } from "recharts";
 
-// ✅ Pastikan path dan huruf besar-kecil sesuai nama file kamu
 import { PLAYOFF_MATCHES, type PlayoffMatch } from "../schedule/_playoffMatches";
 import { type Team } from "../_data";
 
+// Semua tim yang mungkin bertanding
 const TEAMS: Team[] = ["ONIC", "RRQ", "EVOS", "TLID", "GEEK", "AE", "NAVI", "BTR", "DEWA"];
 
+// Warna tiap tim
 const COLORS: Record<Team, string> = {
   ONIC: "#FFD700",
   RRQ: "#888888",
@@ -31,28 +32,36 @@ const COLORS: Record<Team, string> = {
 
 export default function PlayoffPerformanceChart() {
   const { data, yMax } = useMemo(() => {
+    // Ambil semua match finished
     const finished = PLAYOFF_MATCHES.filter(
       (m: PlayoffMatch) =>
-        m.stage === "Playoff" && m.status === "finished" && !!m.score
+        ["Upper Bracket", "Lower Bracket", "Grand Final"].includes(m.stage) &&
+        m.status === "finished" &&
+        !!m.score
     );
 
-    const rounds = [...new Set(finished.map((m: PlayoffMatch) => m.round ?? "R1"))];
+    // Urutkan round unik berdasarkan nama round
+    const rounds = [...new Set(finished.map((m) => m.round ?? "R1"))];
 
+    // Buat data chart per round
     const rows: any[] = [];
     rounds.forEach((r, i) => {
       const row: any = { round: `R${i + 1}` };
       TEAMS.forEach((t) => {
         const prev = i > 0 ? (rows[i - 1]?.[t] as number) ?? 0 : 0;
+        // Hitung kemenangan di round ini
         const won = finished.filter(
-          (m: PlayoffMatch) =>
-            (m.home === t && m.score.home > m.score.away && m.round === r) ||
-            (m.away === t && m.score.away > m.score.home && m.round === r)
+          (m) =>
+            m.round === r &&
+            ((m.home === t && m.score!.home > m.score!.away) ||
+              (m.away === t && m.score!.away > m.score!.home))
         ).length;
         row[t] = prev + won;
       });
       rows.push(row);
     });
 
+    // Nilai maksimal untuk YAxis
     const lastRow = rows[rows.length - 1] ?? {};
     const top = Math.max(...TEAMS.map((t) => Number(lastRow[t] ?? 0)), 1);
 
