@@ -120,14 +120,14 @@ export const MATCHES: MatchItem[] = [
         // ======================
   // WEEK 8 — 10–12 Oktober 2025
   // Jumat, 10 Okt
-  { id: "w8-d1-m1", dateISO: "2025-10-10T15:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "TLID", away: "AE", status: "upcoming" },
-  { id: "w8-d1-m2", dateISO: "2025-10-10T18:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "BTR",  away: "DEWA",  status: "upcoming" },
+  { id: "w8-d1-m1", dateISO: "2025-10-10T15:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "TLID", away: "AE", status: "finished", score: { home: 2, away: 1 } },
+  { id: "w8-d1-m2", dateISO: "2025-10-10T18:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "BTR",  away: "DEWA",  status: "finished", score: { home: 2, away: 0 } },
   // Sabtu, 11 Okt
-  { id: "w8-d2-m1", dateISO: "2025-10-11T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK", away: "TLID", status: "upcoming" },
-  { id: "w8-d2-m2", dateISO: "2025-10-11T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "AE",  away: "RRQ",  status: "upcoming" },
-  { id: "w8-d2-m3", dateISO: "2025-10-11T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "BTR",  away: "ONIC",  status: "upcoming" },
+  { id: "w8-d2-m1", dateISO: "2025-10-11T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "GEEK", away: "TLID", status: "finished", score: { home: 1, away: 2 } },
+  { id: "w8-d2-m2", dateISO: "2025-10-11T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "AE",  away: "RRQ",  status: "finished", score: { home: 2, away: 0 } },
+  { id: "w8-d2-m3", dateISO: "2025-10-11T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "BTR",  away: "ONIC",  status: "finished", score: { home: 2, away: 0 } },
     // Mingu, 12 Okt
-  { id: "w8-d3-m1", dateISO: "2025-10-12T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "RRQ", away: "DEWA", status: "upcoming" },
+  { id: "w8-d3-m1", dateISO: "2025-10-12T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "RRQ", away: "DEWA", status: "finished", score: { home: 2, away: 0 } },
   { id: "w8-d3-m2", dateISO: "2025-10-12T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "ONIC",  away: "EVOS",  status: "upcoming" },
   { id: "w8-d3-m3", dateISO: "2025-10-12T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "NAVI",  away: "GEEK",  status: "upcoming" },
 
