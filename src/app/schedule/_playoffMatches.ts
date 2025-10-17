@@ -1,97 +1,102 @@
-// src/app/schedule/_playoffMatches.ts
-
 export interface PlayoffMatch {
   id: string;
-  stage: "Upper Bracket" | "Lower Bracket" | "Grand Final";
-  round: string;
+  code: string;
+  stage:
+    | "Upper Bracket"
+    | "Lower Bracket"
+    | "Final Upper Bracket"
+    | "Final Lower Bracket"
+    | "Grand Final";
   home: string;
   away: string;
   score?: {
     home: number;
     away: number;
   };
-  status: "finished" | "upcoming";
-  datetime?: string; // misal "Jum, 03 Okt, 16:15"
-  format?: string;   // misal "BO6"
-  bracket: "Upper" | "Lower";
+  datetime: string;
+  format: string;
+  bracket: "Upper" | "Lower" | "Final";
 }
 
 export const PLAYOFF_MATCHES: PlayoffMatch[] = [
-  // =========================
-  // Upper Bracket Quarterfinals
-  // =========================
   {
     id: "1",
+    code: "M1-BO5",
     stage: "Upper Bracket",
-    round: "Quarterfinals",
-    home: "ONIC",
-    away: "BTR",
-    status: "upcoming",
-    datetime: "Jum, 03 Okt, 16:15",
-    format: "BO6",
+    home: "AE",
+    away: "DEWA",
+    datetime: "11,JUN,2025",
+    format: "BO5",
     bracket: "Upper",
   },
   {
     id: "2",
+    code: "M2-BO5",
     stage: "Upper Bracket",
-    round: "Quarterfinals",
-    home: "AE",
-    away: "DEWA",
-    status: "upcoming",
-    datetime: "Jum, 03 Okt, 19:00",
-    format: "BO6",
+    home: "EVOS",
+    away: "NAVI",
+    datetime: "11,JUN,2025",
+    format: "BO5",
     bracket: "Upper",
   },
-
-  // =========================
-  // Upper Bracket Semifinals - masih placeholder
-  // =========================
   {
     id: "3",
+    code: "M3-BO5",
     stage: "Upper Bracket",
-    round: "Semifinals",
-    home: "Winner QF1",
-    away: "Winner QF2",
-    status: "upcoming",
+    home: "ONIC",
+    away: "Winner M1",
+    datetime: "12,JUN,2025",
+    format: "BO5",
     bracket: "Upper",
   },
-
-  // =========================
-  // Lower Bracket Round 1 - placeholder
-  // =========================
   {
     id: "4",
-    stage: "Lower Bracket",
-    round: "Lower Round 1",
-    home: "Loser QF1",
-    away: "Loser QF2",
-    status: "upcoming",
-    bracket: "Lower",
+    code: "M4-BO5",
+    stage: "Upper Bracket",
+    home: "BTR",
+    away: "Winner M2",
+    datetime: "12,JUN,2025",
+    format: "BO5",
+    bracket: "Upper",
   },
-
-  // =========================
-  // Lower Bracket Semifinals - placeholder
-  // =========================
   {
     id: "5",
+    code: "M5-BO5",
     stage: "Lower Bracket",
-    round: "Lower Semifinals",
-    home: "Winner LR1",
-    away: "Loser UB SF",
-    status: "upcoming",
+    home: "Loser M3",
+    away: "Loser M4",
+    datetime: "13,JUN,2025",
+    format: "BO5",
     bracket: "Lower",
   },
-
-  // =========================
-  // Grand Final - placeholder
-  // =========================
   {
     id: "6",
+    code: "M6-BO5",
+    stage: "Final Upper Bracket",
+    home: "Winner M3",
+    away: "Winner M4",
+    datetime: "13,JUN,2025",
+    format: "BO5",
+    bracket: "Upper",
+  },
+  {
+    id: "7",
+    code: "M7-BO7",
+    stage: "Final Lower Bracket",
+    home: "Loser M6",
+    away: "Winner M5",
+    datetime: "14,JUN,2025",
+    format: "BO7",
+    bracket: "Lower",
+  },
+  {
+    id: "8",
+    code: "M8-BO7",
     stage: "Grand Final",
-    round: "Final",
-    home: "Winner UB SF",
-    away: "Winner LB SF",
-    status: "upcoming",
-    bracket: "Upper", // bisa Upper untuk Grand Final
+    home: "Winner M6",
+    away: "Winner M7",
+    datetime: "15,JUN,2025",
+    format: "BO7",
+    bracket: "Final",
   },
 ];
