@@ -134,8 +134,8 @@ export const MATCHES: MatchItem[] = [
           // ======================
   // WEEK 9 — 17–19 Oktober 2025
   // Jumat, 17 Okt
-  { id: "w9-d1-m1", dateISO: "2025-10-17T15:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "BTR", away: "GEEK", status: "upcoming" },
-  { id: "w9-d1-m2", dateISO: "2025-10-17T18:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "DEWA",  away: "ONIC",  status: "upcoming" },
+  { id: "w9-d1-m1", dateISO: "2025-10-17T15:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "BTR", away: "GEEK", status: "finished", score: { home: 0, away: 2 } },
+  { id: "w9-d1-m2", dateISO: "2025-10-17T18:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "DEWA",  away: "ONIC",  status: "finished", score: { home: 0, away: 2 } },
   // Sabtu, 18 Okt
   { id: "w9-d2-m1", dateISO: "2025-10-18T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "EVOS", away: "NAVI", status: "upcoming" },
   { id: "w9-d2-m2", dateISO: "2025-10-18T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "TLID",  away: "RRQ",  status: "upcoming" },
