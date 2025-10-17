@@ -4,9 +4,7 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import { MATCHES, type MatchItem } from "../_matches";
 import { TEAM_FULLNAME, type Team } from "../_data";
-
-
-import RegularPerformanceChart from "./PerformanceChart"; // ✅ ganti dengan nama file grafik regular kamu
+import RegularPerformanceChart from "./PerformanceChart"; // ✅ tetap digunakan
 
 /* ========= Helpers: Week ranges (WIB) ========= */
 const WEEK_RANGES: { week: number; start: string; end: string }[] = [
@@ -201,23 +199,20 @@ export default function StandingsPage() {
         </div>
       </div>
 
-  {/* Grafik Regular Season */}
-<RegularPerformanceChart
-  colors={{
-    ONIC: "#ffd100",
-    RRQ: "#111827",
-    EVOS: "#1d4ed8",
-    TLID: "#3b82f6",
-    GEEK: "#ef4444",
-    AE: "#8b5cf6",
-    NAVI: "#f59e0b",
-    BTR: "#fb7185",
-    DEWA: "#22c55e",
-  }}
-/>
-
-{/* Playoff Section */}
-
-</main>
-);
+      {/* Grafik Regular Season */}
+      <RegularPerformanceChart
+        colors={{
+          ONIC: "#ffd100",
+          RRQ: "#111827",
+          EVOS: "#1d4ed8",
+          TLID: "#3b82f6",
+          GEEK: "#ef4444",
+          AE: "#8b5cf6",
+          NAVI: "#f59e0b",
+          BTR: "#fb7185",
+          DEWA: "#22c55e",
+        }}
+      />
+    </main>
+  );
 }
