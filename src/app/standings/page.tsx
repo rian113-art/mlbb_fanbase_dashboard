@@ -4,8 +4,8 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import { MATCHES, type MatchItem } from "../_matches";
 import { TEAM_FULLNAME, type Team } from "../_data";
-import PlayoffStandings from "./PlayoffStandings";
-import PlayoffPerformanceChart from "./PlayoffPerformanceChart";
+
+
 import RegularPerformanceChart from "./PerformanceChart"; // ✅ ganti dengan nama file grafik regular kamu
 
 /* ========= Helpers: Week ranges (WIB) ========= */
@@ -217,8 +217,7 @@ export default function StandingsPage() {
 />
 
 {/* Playoff Section */}
-<PlayoffStandings />
-<PlayoffPerformanceChart />
+
 </main>
 );
 }
