@@ -141,8 +141,8 @@ export const MATCHES: MatchItem[] = [
   { id: "w9-d2-m2", dateISO: "2025-10-18T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "TLID",  away: "RRQ",  status: "finished", score: { home: 2, away: 0 } },
   { id: "w9-d2-m3", dateISO: "2025-10-18T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "ONIC",  away: "AE",  status: "finished", score: { home: 1, away: 2 } },
     // Mingu, 19 Okt
-  { id: "w9-d3-m1", dateISO: "2025-10-19T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "DEWA", away: "EVOS", status: "upcoming" },
-  { id: "w9-d3-m2", dateISO: "2025-10-19T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "AE",  away: "BTR",  status: "upcoming" },
-  { id: "w9-d3-m3", dateISO: "2025-10-19T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "RRQ",  away: "NAVI",  status: "upcoming" },
+  { id: "w9-d3-m1", dateISO: "2025-10-19T14:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "DEWA", away: "EVOS", status: "finished", score: { home: 2, away: 0 } },
+  { id: "w9-d3-m2", dateISO: "2025-10-19T17:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "AE",  away: "BTR",  status: "finished", score: { home: 1, away: 2 } },
+  { id: "w9-d3-m3", dateISO: "2025-10-19T20:15:00+07:00", stage: "Regular Season", bo: "BO3", home: "RRQ",  away: "NAVI",  status: "finished", score: { home: 2, away: 1 } },
   
 ];
