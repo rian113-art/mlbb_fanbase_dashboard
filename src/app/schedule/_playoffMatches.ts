@@ -21,34 +21,35 @@ export interface PlayoffMatch {
 export const PLAYOFF_MATCHES: PlayoffMatch[] = [
   {
     id: "1",
-    code: "M1-BO5",
+    code: "M1-BO6",
     stage: "Upper Bracket",
     home: "AE",
     away: "NAVI",
-    score: { home: 0, away: 0 }, // ✅ poin kemengan
+    score: { home: 3, away: 1 }, // ✅ poin kemengan
     datetime: "Rabu, 29 Okt 2025",
-    format: "BO5",
+    format: "BO6",
     bracket: "Upper",
   },
   {
     id: "2",
-    code: "M2-BO5",
+    code: "M2-BO6",
     stage: "Upper Bracket",
     home: "EVOS",
     away: "DEWA",
-    score: { home: 0, away: 0 }, // ✅ poin kemangan
+    score: { home: 3, away: 2 }, // ✅ poin kemangan
     datetime: "Rabu, 29 Okt 2025",
-    format: "BO5",
+    format: "BO6",
     bracket: "Upper",
   },
   {
     id: "3",
-    code: "M3-BO5",
+    code: "M3-BO6",
     stage: "Upper Bracket",
     home: "BTR",
-    away: "Winner M1",
+    away: "AE",
+    score: { home: 1, away: 3 }, // ✅ poin kemangan
     datetime: "Kamis, 30 Okt 2025",
-    format: "BO5",
+    format: "BO6",
     bracket: "Upper",
   },
   {
@@ -56,7 +57,8 @@ export const PLAYOFF_MATCHES: PlayoffMatch[] = [
     code: "M4-BO5",
     stage: "Upper Bracket",
     home: "ONIC",
-    away: "Winner M2",
+    away: "EVOS",
+    score: { home: 1, away: 1 }, // ✅ poin kemangan
     datetime: "Kamis, 30 Okt 2025",
     format: "BO5",
     bracket: "Upper",
